@@ -1,0 +1,35 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: aquamarine;
+}
+
+h1 {
+    margin-bottom: 30px;
+}
+
+a {
+    text-decoration: none;
+    color: aliceblue;
+    font-weight: bold;
+    padding: 10px;
+    margin-bottom: 10px;
+    width: 200px;
+    background-color: rgba(65, 62, 62, 0.87);
+    text-align: center;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+a:hover {
+    background-color: black;
+}
