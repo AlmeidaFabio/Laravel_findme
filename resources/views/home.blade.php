@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="{{url('assets/css/home.css')}}">
 </head>
 <body>
-    <h1>Bem vindo ao linkme.e</h1>
+    <h1>Bem vindo ao find.me</h1>
 
     <a href="{{url('admin/login')}}">Entrar</a>
     <a href="{{url('admin/register')}}">Cadastrar</a>

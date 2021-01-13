@@ -1,6 +1,6 @@
 @extends('admin.template')
 
-@section('title', 'Findm.e - '.$page->op_title.' - Links')
+@section('title', 'Find.me - '.$page->op_title.' - Links')
     
 @section('content')
     <div class="pre-header">

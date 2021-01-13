@@ -1,6 +1,6 @@
 @extends('admin.template')
 
-@section('title', 'Findm.e - Home')
+@section('title', 'Find.me - Home')
 
 @section('nav')
     <div class="nav-top">
