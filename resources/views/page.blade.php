@@ -50,7 +50,7 @@
         </div>
     
         <div class="banner">
-            Feito com ♥ por <a href="https://b7web.com.br">B7web</a>
+            <span>@AlmeidaFabio</span>
         </div>
     </div>
 

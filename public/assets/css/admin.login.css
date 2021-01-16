@@ -56,3 +56,22 @@ a:hover {
     border-radius: 5px;
     margin-bottom: 10px;
 }
+
+@media(max-width:1024px) {
+    .form-area {
+        max-width: 800px;
+    }
+}
+
+@media(max-width:800px) {
+    .form-area {
+        margin:0px 10px;
+    }
+}
+
+
+@media(max-width:500px) {
+    .form-area {
+        margin:0px 10px;
+    }
+}

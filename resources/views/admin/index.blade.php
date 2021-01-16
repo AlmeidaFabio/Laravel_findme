@@ -37,7 +37,7 @@
             @foreach ($pages as $page)
                 <tr>
                     <td>{{$page->op_title}} ({{$page->slug}})</td>
-                    <td>
+                    <td class="actions">
                         <a href="{{url('/'.$page->slug)}}" target="_blank">Abrir</a>
                         <a href="{{url('/admin/'.$page->slug.'/links')}}">Links</a>
                         <a href="{{url('/admin/'.$page->slug.'/editpage')}}">Editar</a>
