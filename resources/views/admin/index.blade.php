@@ -40,8 +40,8 @@
                     <td>
                         <a href="{{url('/'.$page->slug)}}" target="_blank">Abrir</a>
                         <a href="{{url('/admin/'.$page->slug.'/links')}}">Links</a>
-                        <a href="{{url('/admin/'.$page->slug.'/design')}}">Aparência</a>
-                        <a href="{{url('/admin/'.$page->slug.'/stats')}}">Estatísticas</a>
+                        <a href="{{url('/admin/'.$page->slug.'/editpage')}}">Editar</a>
+                        <a href="{{url('/admin/'.$page->slug.'/deletepage')}}">Excluir</a>
                     </td>
                 </tr> 
             @endforeach

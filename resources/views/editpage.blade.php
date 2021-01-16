@@ -8,7 +8,7 @@
 </head>
 <body>
     <div class="main">
-        <h3>Nova Página</h3>
+        <h3>{{ isset($page) ? 'Editar Página' : 'Nova Página' }}</h3>
 
         @if ($errors->any())
             <ul>
@@ -18,17 +18,23 @@
             </ul>
         @endif
 
-        <form method="post">
+        <form method="post" enctype="multipart/form-data">
             @csrf 
 
             <label for="">
                 Titulo: <br>
-                <input type="text" name="op_title">
+                <input type="text" name="op_title" value="{{$page->op_title ?? ''}}">
             </label>
 
             <label for="">
                 Descrição: <br>
-                <textarea name="op_description" id="" cols="80" rows="10"></textarea>
+                <textarea name="op_description" id="" cols="80" rows="10">
+                    {{$page->op_description ?? ''}}</textarea>
+            </label>
+
+            <label for="">
+                Foto: <br>
+                <input type="file" name="op_profile_image">
             </label>
 
             <label for="">
@@ -41,12 +47,12 @@
 
             <label for="">
                 Cor do texto: <br>
-                <input type="color" name="op_text_color" value="#000000">
+                <input type="color" name="op_text_color" value="{{$page->op_text_color ?? '#000000'}}">
             </label>
 
             <label for="">
                 Cor de Fundo: <br>
-                <input type="color" name="op_bg_value" value="#FFFFFF">
+                <input type="color" name="op_bg_value" value="{{$page->op_bg_value ?? '#ffffff'}}">
             </label>
 
             <label for="">

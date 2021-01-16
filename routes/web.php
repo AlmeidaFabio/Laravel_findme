@@ -30,6 +30,10 @@ Route::prefix('/admin')->group(function() {
     Route::get('/{id}', [PageController::class, 'newPage']);
     Route::post('/{id}', [PageController::class, 'newPageAction']);
 
+    Route::get('/{slug}/editpage', [PageController::class, 'editPage']);
+    Route::post('/{slug}/editpage', [PageController::class, 'editPageAction']);
+    Route::get('/{slug}/deletepage', [PageController::class, 'deletePage']);
+
     Route::get('/{slug}/editlink/{linkid}', [AdminController::class, 'editLink']);
     Route::post('/{slug}/editlink/{linkid}', [AdminController::class, 'editLinkAction']);
 
