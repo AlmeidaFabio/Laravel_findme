@@ -1,6 +1,24 @@
-@extends('admin.page')
+@extends('admin.template')
 
-@section('body')
+@section('nav')
+    <div class="nav-top">
+        <a href="{{url('/admin')}}">
+            <img src="{{url('assets/images/pages.png')}}" width="28" alt="pages">Suas Páginas
+        </a>
+
+        <a href="{{url('/admin/'.$user->id)}}">
+            <img src="{{url('assets/images/add-file.png')}}" width="28" alt="pages">Nova Página
+        </a>
+    </div>
+
+    <div class="nav-bottom">
+        <a href="{{url('/admin/logout')}}">
+            <img src="{{url('assets/images/logout.png')}}" width="28" alt="logout">
+        </a>
+    </div>
+@endsection
+
+@section('content')
     <a href="{{url('admin/'.$page->slug.'/newlink')}}" class="bigbutton">Novo link</a>
 
     <ul id="links">

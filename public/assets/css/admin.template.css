@@ -3,7 +3,7 @@
 }
 
 body {
-    background-color: #eee;
+    background-color: rgb(238, 238, 238);
     margin: 0;
     display: flex;
     min-height: 100vh;
@@ -14,7 +14,7 @@ nav {
     left: 0;
     top: 0;
     bottom: 0;
-    width: 60px;
+    width: 150px;
     background-color: #fff;
     border-right: 1px solid #ccc;
     display: flex;
@@ -22,6 +22,7 @@ nav {
     justify-content: space-between;
     align-items: center;
     padding: 10px 0;
+    
 }
 
 .nav-top {
@@ -30,6 +31,13 @@ nav {
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    margin-top: 60px;
+}
+
+.nav-top a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .container {
@@ -37,7 +45,7 @@ nav {
     display: flex;
     flex-direction: column;
     min-height: 100vh;
-    margin-left: 60px;
+    margin-left: 150px;
 }
 
 a {
@@ -125,7 +133,7 @@ table td {
 
 .bigbutton {
     display: block;
-    margin: 20px;
+    margin-bottom: 20px;
     padding: 15px;
     background-color: rgb(96, 179, 179);
     color: #000;
@@ -201,7 +209,8 @@ h3 {
 
 @media(max-width: 500px) {
     body {
-        width: 100%;
+        width: 100vw;
+        min-height: 100vh;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -209,7 +218,7 @@ h3 {
 
     nav {
         width: 100%;
-        height: 60px;
+        height: 100px;
         background-color: #fff;
         border-bottom: 1px solid #ccc;
         display: flex;
@@ -219,8 +228,9 @@ h3 {
     }
 
     .nav-top {
-        height: 60px;
-        width: 100px;
+        margin-top: 0;
+        height: 100px;
+        flex: 1;
         display: flex;
         flex-direction: row;
         justify-content: space-around;
@@ -228,11 +238,9 @@ h3 {
     }
 
     .container {
-        display: flex;
-        flex-direction: column;
-        min-height: 100vh;
-        margin-top: 60px;
+        margin-top: 100px;
         margin-left: 0px;
+        flex: 1;
     }
 
     header {
@@ -252,5 +260,51 @@ h3 {
     .area {
         display: flex;
         flex-direction: column;
+    }
+
+    #links {
+        flex: 1;
+        list-style: none;
+    }
+
+    .link-item {
+        flex: 1;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        margin-bottom: 10px;
+        background-color: rgb(247, 243, 243);
+        border-radius: 10px;
+        box-shadow: 0px 2px 2px #ccc;   
+    }
+
+    .link-item-order {
+        cursor: move;
+    }
+    
+    .link-item-info {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+    }
+
+    .link-item-href {
+        font-size: small;
+        word-break: break-all;
+    }
+    
+    .link-item-title {
+        font-weight: bold;
+    }
+
+    .link-item-buttons {
+        width: 90%;
+        display: flex;
+        justify-content: space-around;
     }
 }

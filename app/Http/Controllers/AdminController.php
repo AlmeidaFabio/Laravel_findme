@@ -97,6 +97,7 @@ class AdminController extends Controller
             return view('admin/links', [
                 'menu' => 'links',
                 'page' => $page,
+                'user' => $user,
                 'links' => $links
             ]);
         } else {
@@ -160,7 +161,8 @@ class AdminController extends Controller
         if ($page) {
             return view('admin/editlink', [
                 'menu' => 'links',
-                'page' => $page
+                'page' => $page,
+                'user' => $user
             ]);
         } else {
             return redirect('/admin');
@@ -217,7 +219,8 @@ class AdminController extends Controller
                     return view('admin/editlink', [
                         'menu' => 'links',
                         'page' => $page,
-                        'link' => $link
+                        'link' => $link,
+                        'user' => $user
                     ]);
                 }
         }

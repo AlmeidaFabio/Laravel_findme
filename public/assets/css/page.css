@@ -90,6 +90,15 @@ form select {
     padding: 0 10px;
 }
 
+form textarea{
+    width: 100%;
+    padding-left: 10px;
+    height: 40px;
+    line-height: 40px;
+    border: 1px solid #ccc;
+    outline: none;
+}
+
 form input[type=submit] {
     background-color: rgb(96, 179, 179);
     cursor: pointer;
@@ -111,8 +120,6 @@ form input[type=submit] {
     }
 
     .main {
-        max-width: 300px;
-        margin: 10px;
-        padding: 20px;
+        width: 100%;
     }
 }

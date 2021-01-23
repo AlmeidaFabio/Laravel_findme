@@ -28,7 +28,7 @@
 
             <label for="">
                 Descrição: <br>
-                <textarea name="op_description" id="" cols="80" rows="10">
+                <textarea name="op_description">
                     {{$page->op_description ?? ''}}</textarea>
             </label>
 
@@ -38,7 +38,7 @@
             </label>
 
             <label for="">
-                Bg: <br>
+                Tipo de Fundo: <br>
                 <select name="op_bg_type" id="">
                     <option value="image">Imagem</option>
                     <option value="color">Cor</option>
@@ -52,7 +52,7 @@
 
             <label for="">
                 Cor de Fundo: <br>
-                <input type="color" name="op_bg_value" value="{{$page->op_bg_value ?? '#ffffff'}}">
+                <input type="color" name="op_bg_value" value="{{$page->op_bg_value ?? '#ffffff'}}">                
             </label>
 
             <label for="">

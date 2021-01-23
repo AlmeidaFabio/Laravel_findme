@@ -187,8 +187,7 @@ class PageController extends Controller
 
         return redirect('/admin');
     }
-
-    
+   
     public function deletePage($slug) {
         $user = Auth::user();
         $page = Page::where('id_user', $user->id)

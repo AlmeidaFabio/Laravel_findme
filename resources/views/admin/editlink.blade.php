@@ -1,8 +1,40 @@
-@extends('admin.page')
+@extends('admin.template')
 
-@section('body')
+@section('nav')
+    <div class="nav-top">
+        <a href="{{url('/admin')}}">
+            <img src="{{url('assets/images/pages.png')}}" width="28" alt="pages">Suas Páginas
+        </a>
 
-    <h3>{{ isset($link) ? 'Editar Link' : 'Novo Link' }}</h3>
+        <a href="{{url('/admin/'.$user->id)}}">
+            <img src="{{url('assets/images/add-file.png')}}" width="28" alt="pages">Nova Página
+        </a>
+    </div>
+
+    <div class="nav-bottom">
+        <a href="{{url('/admin/logout')}}">
+            <img src="{{url('assets/images/logout.png')}}" width="28" alt="logout">
+        </a>
+    </div>
+@endsection
+
+@section('content')
+
+<div class="pre-header">
+    Página: {{$page->op_title}}
+</div>
+
+<div class="area">
+    <div class="leftside">
+        <header>
+            <ul>
+                <li @if ($menu == 'links') class="active" @endif><a href="{{url('/admin/'.$page->slug.'/links')}}">Links</a></li>
+                <li @if ($menu == 'design') class="active" @endif><a href="{{url('/admin/'.$page->slug.'/design')}}">Aparência</a></li>
+                <li @if ($menu == 'stats') class="active" @endif><a href="{{url('/admin/'.$page->slug.'/stats')}}">Estatísticas</a></li>
+            </ul>
+        </header>
+
+        <h3>{{ isset($link) ? 'Editar Link' : 'Novo Link' }}</h3>
 
     @if ($errors->any())
         <ul>
@@ -55,5 +87,10 @@
             <input type="submit" value="Salvar">
         </label>
     </form>
+    </div>
+    <div class="rightside">
+        <iframe src="{{url('/'.$page->slug)}}" frameborder="0"></iframe>
+    </div>
+</div>   
 
 @endsection

@@ -5,11 +5,11 @@
 @section('nav')
     <div class="nav-top">
         <a href="{{url('/admin')}}">
-            <img src="{{url('assets/images/pages.png')}}" width="28" alt="pages">
+            <img src="{{url('assets/images/pages.png')}}" width="28" alt="pages">Suas Páginas
         </a>
 
         <a href="{{url('/admin/'.$user->id)}}">
-            <img src="{{url('assets/images/add-file.png')}}" width="28" alt="pages">
+            <img src="{{url('assets/images/add-file.png')}}" width="28" alt="pages">Nova Página
         </a>
     </div>
 
@@ -22,7 +22,7 @@
 
 @section('content')
     <header>
-        <h2>Suas páginas {{$user->name}}</h2>
+        <h2>Suas Páginas</h2>
     </header>
     
     <table>
